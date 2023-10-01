@@ -148,6 +148,7 @@ Jika **belum** terdapat buku yang dimasukkan, _server_ bisa merespons dengan _ar
 API yang Anda buat harus dapat menampilkan seluruh buku yang disimpan melalui route:<br/>
 - Method : GET<br/>
 - URL: /books/{bookId}<br/>
+
 Bila buku dengan id yang dilampirkan oleh client tidak ditemukan, maka server harus mengembalikan respons dengan:<br/>
 - Status Code : 404 <br/>
 - Response Body: <br/>
