@@ -108,5 +108,96 @@ API yang Anda buat harus dapat menampilkan seluruh buku yang disimpan melalui ro
   - URL: /books
 
 Server harus mengembalikan respons dengan: <br/>
-  - Status Code : 200
-  - Response Body:
+  - Status Code : 200<br/>
+  - Response Body: <br/>
+    ```javascript
+    {
+      "status": "success",
+      "data": {
+        "books": [
+        {
+          "id": "Qbax5Oy7L8WKf74l",
+          "name": "Buku A",
+           "publisher": "Dicoding Indonesia"
+        },
+        {
+          "id": "1L7ZtDUFeGs7VlEt",
+          "name": "Buku B",
+          "publisher": "Dicoding Indonesia"
+        },
+        {
+          "id": "K8DZbfI-t3LrY7lD",
+          "name": "Buku C",
+          "publisher": "Dicoding Indonesia"
+        }
+        ]
+      }
+    }
+    ```
+Jika **belum** terdapat buku yang dimasukkan, _server_ bisa merespons dengan _array_ books kosong.<br/>
+```javascript
+{
+    "status": "success",
+    "data": {
+        "books": []
+    }
+}
+```
+
+## Kriteria 5 : API dapat menampilkan detail buku
+API yang Anda buat harus dapat menampilkan seluruh buku yang disimpan melalui route:<br/>
+- Method : GET<br/>
+- URL: /books/{bookId}<br/>
+Bila buku dengan id yang dilampirkan oleh client tidak ditemukan, maka server harus mengembalikan respons dengan:<br/>
+- Status Code : 404 <br/>
+- Response Body: <br/>
+  ```javascript
+  {
+    "status": "fail",
+    "message": "Buku tidak ditemukan"
+  }
+  ```
+  
+Bila buku dengan id yang dilampirkan ditemukan, maka server harus mengembalikan respons dengan: <br/>
+- Status Code : 200 <br/>
+- Response Body:<br/>
+  ```javascript
+  {
+    "status": "success",
+    "data": {
+      "book": {
+            "id": "aWZBUW3JN_VBE-9I",
+            "name": "Buku A Revisi",
+            "year": 2011,
+            "author": "Jane Doe",
+            "summary": "Lorem Dolor sit Amet",
+            "publisher": "Dicoding",
+            "pageCount": 200,
+            "readPage": 26,
+            "finished": false,
+            "reading": false,
+            "insertedAt": "2021-03-05T06:14:28.930Z",
+            "updatedAt": "2021-03-05T06:14:30.718Z"
+      }
+    }
+  }
+  ```
+
+## Kriteria 6 : API dapat mengubah data buku
+API yang Anda buat harus dapat mengubah data buku berdasarkan id melalui route:<br/>
+- Method : PUT <br/>
+- URL : /books/{bookId} <br/>
+- Body Request: <br/>
+  ```javascript
+  {
+    "name": string,
+    "year": number,
+    "author": string,
+    "summary": string,
+    "publisher": string,
+    "pageCount": number,
+    "readPage": number,
+    "reading": boolean
+  }
+  ```
+Server harus merespons gagal bila: <br/>
