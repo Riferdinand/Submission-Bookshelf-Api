@@ -1,4 +1,4 @@
-# **Kriteria Submission-Bookshelf-Api**
+# KRITERIA PENGERJAAN PROYEK AKHIR ATAU SUBMISSION BOOKSHELF-API
 Berikut ini adalah kriteria atau ketentuan - ketentuan yang harus dilakukan saat mengerjakan submission ini. Jika tidak mengikutinya, maka dapat dipastikan bahwa program yang telah dibuat atau project yang telah dibuat akan ditolak oleh tim Dicoding Indonesia. Untuk itu, Perhatikanlah setiap ketentuan yang ada agar mendapatkan nilai yang maksimal. <br/>
 
 
