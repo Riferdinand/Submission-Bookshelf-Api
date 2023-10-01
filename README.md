@@ -201,4 +201,62 @@ API yang Anda buat harus dapat mengubah data buku berdasarkan id melalui route:<
   }
   ```
 Server harus merespons gagal bila: <br/>
+- Client tidak melampirkan properti name pada request body. Bila hal ini terjadi, maka server akan merespons dengan: <br/>
+    - Status Code : 400 <br/>
+    - Response Body: <br/>
+      ```javascript
+      {
+        "status": "fail",
+        "message": "Gagal memperbarui buku. Mohon isi nama buku"
+      }
+      ```
+- Client melampirkan nilai properti readPage yang lebih besar dari nilai properti pageCount. Bila hal ini terjadi, maka server akan merespons dengan: <br/>
+  - Status Code : 400 <br/>
+  - Response Body:<br/>
+    ```javascript
+    {
+      "status": "fail",
+      "message": "Gagal memperbarui buku. readPage tidak boleh lebih besar dari pageCount"
+    }
+    ```
+- Idyang dilampirkan oleh client tidak ditemukkan oleh server. Bila hal ini terjadi, maka server akan merespons dengan:<br/>
+  - Status Code : 404 <br/>
+  - Response Body: <br/>
+    ```javascript
+    {
+      "status": "fail",
+      "message": "Gagal memperbarui buku. Id tidak ditemukan"
+    }
+    ```
+Bila buku berhasil diperbarui, server harus mengembalikan respons dengan: <br/>
+- Status Code : 200 <br/>
+- Response Body: <br/>
+  ```javascript
+  {
+    "status": "success",
+    "message": "Buku berhasil diperbarui"
+  }
+  ```
 
+## Kriteria 7 : API dapat menghapus buku
+API yang Anda buat harus dapat menghapus buku berdasarkan id melalui route berikut:<br/>
+- Method : DELETE <br/>
+- URL: /books/{bookId} <br/>
+Bila id yang dilampirkan tidak dimiliki oleh buku manapun, maka server harus mengembalikan respons berikut:<br/>
+- Status Code : 404 <br/>
+- Response Body: <br/>
+  ```javascript
+  {
+    "status": "fail",
+    "message": "Buku gagal dihapus. Id tidak ditemukan"
+  }
+  ```
+Bila id dimiliki oleh salah satu buku, maka buku tersebut harus dihapus dan server mengembalikan respons berikut: <br/>
+- Status Code : 200<br/>
+- Response Body: <br/>
+  ```javascript
+  {
+    "status": "success",
+    "message": "Buku berhasil dihapus"
+  }
+  ```
