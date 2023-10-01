@@ -77,5 +77,5 @@ Objek buku yang disimpan pada server harus memiliki struktur seperti contoh di b
         "message": "Gagal menambahkan buku. Mohon isi nama buku"
       }
       ```
-      \
+      /
 - Client melampirkan nilai properti readPage yang lebih besar dari nilai properti pageCount. Bila hal ini terjadi, maka server akan merespons dengan: <br/>
