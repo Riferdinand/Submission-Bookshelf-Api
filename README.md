@@ -1,5 +1,5 @@
 # KRITERIA PENGERJAAN PROYEK AKHIR ATAU SUBMISSION BOOKSHELF-API
-<style text-align="justify";>Berikut ini adalah kriteria atau ketentuan - ketentuan yang harus dilakukan saat mengerjakan submission ini. Jika tidak mengikutinya, maka dapat dipastikan bahwa program yang telah dibuat atau project yang telah dibuat akan ditolak oleh tim Dicoding Indonesia. Untuk itu, Perhatikanlah setiap ketentuan yang ada agar mendapatkan nilai yang maksimal. <br/>
+<div align="justify">Berikut ini adalah kriteria atau ketentuan - ketentuan yang harus dilakukan saat mengerjakan submission ini. Jika tidak mengikutinya, maka dapat dipastikan bahwa program yang telah dibuat atau project yang telah dibuat akan ditolak oleh tim Dicoding Indonesia. Untuk itu, Perhatikanlah setiap ketentuan yang ada agar mendapatkan nilai yang maksimal. <div/><br/>
 
 
 ## Kriteria 1: Aplikasi menggunakan port 9000
@@ -201,4 +201,4 @@ API yang Anda buat harus dapat mengubah data buku berdasarkan id melalui route:<
   }
   ```
 Server harus merespons gagal bila: <br/>
-<style/>
+
