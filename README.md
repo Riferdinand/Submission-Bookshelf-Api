@@ -16,7 +16,7 @@ Aplikasi yang Anda buat harus memiliki runner script start. Cara membuatnya, And
 }
 ``` 
 
-Pastikan aplikasi tidak dijalankan dengan menggunakan nodemon. Jika Anda ingin menggunakan nodemon dalam proses development, <br/> masukkan nodemon kedalam runner script lain, contohnya: <br/>
+Pastikan aplikasi tidak dijalankan dengan menggunakan nodemon. Jika Anda ingin menggunakan nodemon dalam proses development, masukkan nodemon kedalam runner script lain, contohnya: <br/>
 ```javascript
 {
   "name": "submission",
