@@ -77,5 +77,35 @@ Objek buku yang disimpan pada server harus memiliki struktur seperti contoh di b
         "message": "Gagal menambahkan buku. Mohon isi nama buku"
       }
       ```
-      /
+
 - Client melampirkan nilai properti readPage yang lebih besar dari nilai properti pageCount. Bila hal ini terjadi, maka server akan merespons dengan: <br/>
+  - Status Code : 400 <br/>
+  - Response Body: <br/>
+    ```javascript
+    {
+      "status": "fail",
+      "message": "Gagal menambahkan buku. readPage tidak boleh lebih besar dari pageCount"
+    }
+    ```
+
+- Bila buku berhasil dimasukkan, server harus mengembalikan respons dengan: <br/>
+  - Status Code : 201 <br/>
+  - Response Body: <br/>
+    ```javascript
+    {
+      "status": "success",
+      "message": "Buku berhasil ditambahkan",
+      "data": {
+        "bookId": "1L7ZtDUFeGs7VlEt"
+      }
+    }
+    ```
+
+## Kriteria 4: API dapat menampilkan seluruh buku
+API yang Anda buat harus dapat menampilkan seluruh buku yang disimpan melalui route:<br/>
+  - Method : GET
+  - URL: /books
+
+Server harus mengembalikan respons dengan: <br/>
+  - Status Code : 200
+  - Response Body:
